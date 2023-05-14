@@ -1,11 +1,9 @@
 import time
-
 from django.http import HttpRequest
 from django.shortcuts import render
 
 
 def set_useragent_onrequest_middleware(get_response):
-
     print('initial call')
 
     def middleware(request: HttpRequest):
@@ -26,14 +24,24 @@ class CountRequestsMiddleware:
 
     def __call__(self, request: HttpRequest):
         time_limit = 3
-        if not self.request_time:
-            print('Fist request')
-        else:
-            if (round(time.time()) * 1) - self.request_time['time'] < time_limit and \
-                    self.request_time['ip'] == request.META.get('REMOTE_ADDR'):
-                print('Attention! Service request limit exceeded. Less than 3 seconds have passed')
+        user_key = request.META.get('REMOTE_ADDR')
+
+        if user_key not in self.request_time:
+            print('New IP!')
+            self.request_time = ({user_key: (round(time.time()) * 1)})
+            print('test:', self.request_time)
+
+        try:
+            print('Now in first-part try', 'ip:', user_key, 'last-time:', self.request_time[user_key])
+            if (round(time.time()) * 1) - self.request_time[user_key] >= time_limit:
+                self.request_time = ({user_key: (round(time.time()) * 1)})
+                print('add new last-time for user:', user_key, self.request_time[user_key])
+            else:
                 return render(request, 'requestdataapp/error-time.html')
-        self.request_time = {'time': round(time.time()) * 1, 'ip': request.META.get('REMOTE_ADDR')}
+
+        except PermissionError:
+            print('Now in second-part block-try')
+            raise PermissionError('Time-limit!')
 
         self.requests_count += 1
         print('requests count', self.requests_count)
