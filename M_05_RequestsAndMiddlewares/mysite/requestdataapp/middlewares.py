@@ -30,18 +30,13 @@ class CountRequestsMiddleware:
             print('New IP!')
             self.request_time = ({user_key: (round(time.time()) * 1)})
             print('test:', self.request_time)
-
-        try:
-            print('Now in first-part try', 'ip:', user_key, 'last-time:', self.request_time[user_key])
+        else:
             if (round(time.time()) * 1) - self.request_time[user_key] >= time_limit:
-                self.request_time = ({user_key: (round(time.time()) * 1)})
+                self.request_time[user_key] = round(time.time()) * 1
                 print('add new last-time for user:', user_key, self.request_time[user_key])
             else:
+                print('Time limit!')
                 return render(request, 'requestdataapp/error-time.html')
-
-        except PermissionError:
-            print('Now in second-part block-try')
-            raise PermissionError('Time-limit!')
 
         self.requests_count += 1
         print('requests count', self.requests_count)
