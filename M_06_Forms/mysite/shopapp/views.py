@@ -38,17 +38,12 @@ def create_product(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
         form = ProductForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            price = form.cleaned_data['price']
-            discription = form.cleaned_data['discription']
-            discount =form.cleaned_data['discount']
-            # Product.objects.create(**form.cleaned_data)
+            form.save()
             url = reverse('shopapp:products_list')
             return redirect(url)
-        else:
-            form = ProductForm()
+    else:
+        form = ProductForm()
 
-    form = ProductForm()
     context = {
         'form': form,
     }
@@ -69,11 +64,9 @@ def create_order(request: HttpRequest) -> HttpResponse:
             form.save()
             url = reverse('shopapp:orders_list')
             return redirect(url)
-        else:
-            form = OrderForm()
+    else:
+        form = OrderForm()
 
-
-    form = OrderForm()
     context = {
         'form': form,
     }
