@@ -1,11 +1,10 @@
-from django.contrib.auth.mixins import UserPassesTestMixin, PermissionRequiredMixin
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+
 from .models import Product, Order
-from myauth.models import Profile
 
 
 class ShopIndexView(View):
@@ -27,28 +26,13 @@ class ProductsListView(ListView):
     queryset = Product.objects.filter(archived=False)
 
 
-class ProductCreateView(PermissionRequiredMixin, CreateView):
-    permission_required = 'shopapp.add_product'
+class ProductCreateView(CreateView):
     model = Product
     fields = "name", "price", "description", "discount"
     success_url = reverse_lazy("shopapp:products_list")
 
-    def form_valid(self, form):
-        if self.request.user.is_superuser:
-            if Profile.objects.filter(user_id=1).exists():
-                pass
-            else:
-                Profile.objects.create(user_id=1)
 
-        form.instance.created_by = self.request.user
-        response = super().form_valid(form)
-        return response
-
-
-class ProductUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView):
-    def test_func(self):
-        return self.request.user.is_superuser or (self.request.user == self.get_object().created_by)
-    permission_required = 'shopapp.change_product'
+class ProductUpdateView(UpdateView):
     model = Product
     fields = "name", "price", "description", "discount"
     template_name_suffix = "_update_form"
