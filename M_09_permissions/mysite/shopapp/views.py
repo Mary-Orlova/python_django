@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import UserPassesTestMixin, PermissionRequiredMixin
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
@@ -26,13 +27,22 @@ class ProductsListView(ListView):
     queryset = Product.objects.filter(archived=False)
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(PermissionRequiredMixin, CreateView):
+    permission_required = 'shopapp.add_product'
     model = Product
     fields = "name", "price", "description", "discount"
     success_url = reverse_lazy("shopapp:products_list")
 
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        response = super().form_valid(form)
+        return response
 
-class ProductUpdateView(UpdateView):
+
+class ProductUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView):
+    def test_func(self):
+        return self.request.user.is_superuser or (self.request.user == self.get_object().created_by)
+    permission_required = 'shopapp.change_product'
     model = Product
     fields = "name", "price", "description", "discount"
     template_name_suffix = "_update_form"
