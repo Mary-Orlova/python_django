@@ -4,8 +4,8 @@ from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-
 from .models import Product, Order
+from myauth.models import Profile
 
 
 class ShopIndexView(View):
@@ -34,6 +34,12 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
     success_url = reverse_lazy("shopapp:products_list")
 
     def form_valid(self, form):
+        if self.request.user.is_superuser:
+            if Profile.objects.filter(user_id=1).exists():
+                pass
+            else:
+                Profile.objects.create(user_id=1)
+
         form.instance.created_by = self.request.user
         response = super().form_valid(form)
         return response
