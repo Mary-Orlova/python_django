@@ -34,6 +34,9 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
     success_url = reverse_lazy("shopapp:products_list")
 
     def form_valid(self, form):
+        if self.request.user.is_superuser and not Profile.objects.filter(user_id=1).exists():
+            Profile.objects.create(user_id=1)
+
         form.instance.created_by = self.request.user
         response = super().form_valid(form)
         return response
