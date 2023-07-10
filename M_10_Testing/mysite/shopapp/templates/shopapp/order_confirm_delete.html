@@ -1,15 +1,15 @@
 {% extends 'shopapp/base.html' %}
 
 {% block title %}
-Confirm archive {{object.name }}
+Confirm delete {{object.name }}
 {% endblock %}
 
 {% block body %}
-<h1>Are you sure you want to archive {{ object.name }}?</h1>
+<h1>Are you sure you want to delete order?</h1>
 <br>
 <div>
-    <a href="{% url 'shopapp:product_details' pk=product.pk %}">
-        Back to product
+    <a href="{% url 'shopapp:order_details' pk=object.pk %}">
+        Back to order
     </a>
 </div>
 
@@ -18,7 +18,7 @@ Confirm archive {{object.name }}
     <form method="post">
         {% csrf_token %}
         {{form.as_p }}
-        <button type="submit">archive</button>
+        <button type="submit">delete</button>
     </form>
 </div>
 {% endblock %}
