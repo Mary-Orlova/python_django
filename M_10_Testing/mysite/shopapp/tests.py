@@ -2,6 +2,7 @@ from django.contrib.auth.models import User, Permission
 from django.test import TestCase
 from django.urls import reverse
 from requests import request
+from django.core import serializers
 
 from shopapp.models import Order, Product
 
@@ -52,7 +53,7 @@ class OrdersExportTestCase(TestCase):
         self.client.force_login(self.user)
 
     def test_get_orders_view(self):
-        response = self.client.get(reverse('shopapp:orders_export', kwargs={'pk': self.order.pk}))
+        response = self.client.get(reverse('shopapp:orders_export'))
         self.assertEqual(response.status_code, 200)
         orders = Order.objects.order_by('pk').all()
         expected_data = [
@@ -61,13 +62,17 @@ class OrdersExportTestCase(TestCase):
                 'delivery_address': order.delivery_address,
                 'promocode': order.promocode,
                 'user': order.user.pk,
-                'product': ['product.pk for product in order.products']
-                # 'product': order.product,
+                 'products': [product.pk for product in order.products.all()]
             }
             for order in orders
-        ]
-        orders_data = response.json()
-        self.assertEqual(orders_data['orders'], expected_data)
+            ]
+
+
+        order_data = serializers.serialize('json', response.context['orders'])
+
+        self.assertEqual(order_data, expected_data)
+        # self.assertEqual(orders_data['orders'], expected_data)
+
 
     @classmethod
     def tearDownClass(cls):

@@ -1,5 +1,5 @@
 from django.contrib.auth.mixins import UserPassesTestMixin, PermissionRequiredMixin
-from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
+from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse, response
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views import View
@@ -119,7 +119,7 @@ class OrdersDataExportView(View):
         if self.request.user.is_staff:
             return self.request.user
 
-    def get(self, request: HttpRequest) -> JsonResponse:
+    def get(self, request: HttpRequest) :
         orders = Order.objects.order_by('pk').all()
 
         orders_data =[
@@ -128,11 +128,8 @@ class OrdersDataExportView(View):
                 'delivery_address': order.delivery_address,
                 'promocode': order.promocode,
                 'user': order.user.pk,
-                'product': ['product.pk for product in order.products']
-                # 'products': order.products,
-
+                'products': [product.pk for product in order.products.all()]
             }
             for order in orders
         ]
-
         return JsonResponse({'orders': orders_data})
