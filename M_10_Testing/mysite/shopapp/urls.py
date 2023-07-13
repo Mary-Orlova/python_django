@@ -1,5 +1,7 @@
 from django.urls import path
 
+app_name = 'shopapp'
+
 from .views import (
     ShopIndexView,
     ProductDetailsView,
@@ -8,14 +10,12 @@ from .views import (
     OrderCreateView,
     OrderDetailView,
     OrderUpdateView,
+    OrdersDataExportView,
     OrderDeleteView,
     ProductCreateView,
     ProductUpdateView,
     ProductDeleteView,
-    OrdersDataExportView,
 )
-
-app_name = "shopapp"
 
 urlpatterns = [
     path("", ShopIndexView.as_view(), name="index"),

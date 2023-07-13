@@ -115,17 +115,24 @@ class OrderDetailView(PermissionRequiredMixin, DetailView):
     context_object_name = "order"
 
 class OrdersDataExportView(View):
+    def test_funk(self):
+        if self.request.user.is_staff:
+            return self.request.user
+
     def get(self, request: HttpRequest) -> JsonResponse:
         orders = Order.objects.order_by('pk').all()
+
         orders_data =[
             {
                 'pk': order.pk,
                 'delivery_address': order.delivery_address,
                 'promocode': order.promocode,
-                'user': order.user,
-                'products': order.products,
+                'user': order.user.pk,
+                'product': ['product.pk for product in order.products']
+                # 'products': order.products,
 
             }
             for order in orders
         ]
+
         return JsonResponse({'orders': orders_data})
