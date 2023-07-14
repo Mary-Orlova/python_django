@@ -67,8 +67,9 @@ class OrdersExportTestCase(TestCase):
             for order in orders
             ]
 
-
-        order_data = serializers.serialize('json', response.context['orders'])
+        response_data = response.json()
+        order_data = response_data['orders']
+        # order_data = serializers.serialize('json', response.context['orders'])
 
         self.assertEqual(order_data, expected_data)
         # self.assertEqual(orders_data['orders'], expected_data)
