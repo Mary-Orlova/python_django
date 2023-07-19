@@ -1,11 +1,11 @@
 {% extends 'shopapp/base.html' %}
 
 {% block title %}
- Update product
+ Update order
 {% endblock %}
 
 {% block body %}
-<h1>Update product</h1>
+<h1>Update order</h1>
 
 <div>
     <form method="post">
@@ -16,7 +16,7 @@
 </div>
 
 <div>
-    <a href="{% url 'shopapp:product_details' pk=object.pk %}">Back to product #{{object.pk }}</a>
+    <a href="{% url 'shopapp:order_details' pk=object.pk %}">Back to order #{{object.pk }}</a>
 </div>
 
 {% endblock %}
