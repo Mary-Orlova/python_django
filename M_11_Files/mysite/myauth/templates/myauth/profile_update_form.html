@@ -1,0 +1,25 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+Update avatar
+{% endblock %}
+
+{% block body %}
+
+<h1>Update avatar</h1>
+<div>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p }}
+    {% if user.profile.avatar %}
+      <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
+    {% endif %} <br>
+    <button type="submit">Update</button>
+  </form>
+</div>
+
+<div>
+  <a href="{% url 'myauth:about-me' %}">
+    Back to about me</a>
+</div>
+{% endblock %}
