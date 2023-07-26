@@ -75,7 +75,7 @@ class AvatarUpdateView(UpdateView):
             Profile.objects.create(user_id=1)
         elif not Profile.objects.filter(user_id=self.request.user.id).exists():
             Profile.objects.create(user=self.object)
-        if self.request.user.is_superuser and Profile.objects.filter(user_id=1).exists():
+        elif self.request.user.is_superuser and Profile.objects.filter(user_id=1).exists():
             for image in form.files.getlist('images'):
                 Profile.objects.get_or_create(
                     user=self.object,
@@ -86,6 +86,7 @@ class AvatarUpdateView(UpdateView):
                 user=self.object,
                 image=image,
             )
+
         return response
 
 
