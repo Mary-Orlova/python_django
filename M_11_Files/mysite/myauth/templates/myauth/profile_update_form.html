@@ -10,15 +10,8 @@ Update avatar
 <div>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {% if request.user.is_staff %}
-    {{form.as_p }}
-    {% else %}
-    <p>{{form.avatar}}</p>
-    {% endif%}
 
-    {% if user.profile.avatar %}
-      <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
-    {% endif %} <br>
+    <p>{{form.avatar}}</p>
     <button type="submit">Update</button>
   </form>
 </div>

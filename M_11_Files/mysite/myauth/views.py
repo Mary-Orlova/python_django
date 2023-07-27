@@ -53,34 +53,46 @@ class RegisterView(CreateView):
         return response
 
 
-class AvatarUpdateView(UpdateView):
+class AvatarUpdateView(UserPassesTestMixin, UpdateView):
     def test_func(self):
-        return self.request.user.is_superuser or (
-                self.request.user == Profile.objects.filter(user_id=self.request.user.id).exists())
+        # print(self.request.user)
+        # print(self.request.user.is_staff)
+        if self.request.user.is_staff:
+            return True
+        self.object = self.get_object()
+        if self.request.user.pk == self.object.user.pk:
+            return True
+        return False
+        # return self.request.user.is_superuser or (
+        #         self.request.user == Profile.objects.filter(user_id=self.request.user.id).exists())
     permission_required = 'myauth.change_profile'
     # form_class = ProfileForm
     model = Profile
-    fields = 'user', 'bio', 'avatar'
+    fields = 'bio', 'avatar'
     template_name_suffix = "_update_form"
 
     def get_success_url(self):
-        return reverse('myauth:about-me',
-                       # kwargs={"pk": self.object.pk},
-                       )
+        return reverse(
+            "myauth:user-details",
+            kwargs={"pk": self.object.user.pk},
+        )
+        # return reverse('myauth:about-me',
+        #                # kwargs={"pk": self.object.pk},
+        #                )
 
     def form_valid(self, form):
         user = form.save()
         response = super().form_valid(form)
-        if self.request.user.is_superuser and not Profile.objects.filter(user_id=1).exists():
-            Profile.objects.create(user_id=1)
-        elif not Profile.objects.filter(user_id=self.request.user.id).exists():
-            Profile.objects.create(user=self.object)
-        elif self.request.user.is_superuser and Profile.objects.filter(user_id=1).exists():
-            for image in form.files.getlist('images'):
-                Profile.objects.get_or_create(
-                    user=self.object,
-                    image=image,
-                )
+        # if self.request.user.is_superuser and not Profile.objects.filter(user_id=1).exists():
+        #     Profile.objects.create(user_id=1)
+        # elif not Profile.objects.filter(user_id=self.request.user.id).exists():
+        #     Profile.objects.create(user=self.object)
+        # elif self.request.user.is_superuser and Profile.objects.filter(user_id=1).exists():
+        #     for image in form.files.getlist('images'):
+        #         Profile.objects.get_or_create(
+        #             user=self.object,
+        #             image=image,
+        #         )
         for image in form.files.getlist('images'):
             Profile.objects.get_or_create(
                 user=self.object,

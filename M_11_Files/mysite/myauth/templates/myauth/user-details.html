@@ -6,10 +6,13 @@
 
 {% block body %}
 <h2>Detail</h2>
-    {% if user.profile.avatar %}
-      <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
-    {% endif %} <br>
+{% if user.profile.avatar  %}
+    <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
+{% endif %}
 
+{% empty %}
+  <div>No images upload yet</div>
+{% endfor %}
 
     <p>Username: {{ user.username }}</p>
     <p>First name: {{ user.first_name }}</p>
@@ -17,6 +20,13 @@
     <p>Email: {{ user.email }}</p>
     <p>Bio: {{ user.profile.bio }}</p>
 </div>
+
+{% if request.user.is_superuser %}
+      <div>
+         <a href="{% url 'myauth:profile-update' pk=user.pk %}">Download a new avatar </a>
+          <p><a href="{% url 'myauth:users-list' %}">Users list</a></p>
+      </div>
+{% endif %}
 
 <div>
  <a href="{% url 'myauth:about-me' %}">Back to about me</a>
