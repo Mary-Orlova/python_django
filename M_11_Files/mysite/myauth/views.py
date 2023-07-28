@@ -32,7 +32,7 @@ class UserDetailsView(DetailView):
 class RegisterView(CreateView):
     form_class = UserCreationForm
     template_name = 'myauth/register.html'
-    success_url = reverse_lazy('myauth:profile_list')
+    success_url = reverse_lazy('myauth:users-list')
 
     def form_valid(self, form):
         user = form.save()
