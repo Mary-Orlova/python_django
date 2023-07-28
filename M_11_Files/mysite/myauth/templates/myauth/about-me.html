@@ -18,25 +18,14 @@
 
     {% if user.profile.avatar %}
       <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
-    {% endif %} <br>
     {% else %}
-    <p>No avatar</p>
-    {% endif%}
-
-    {% for img in profile.images.all %}
-      <div>
-       <img src=" {{ user.profile.avatar. }}" alt="{{ user.profile.avatar.name }}">
-      </div>
-     {% endfor %}
-
-    {% if request.user.is_staff or perms.myauth.change_profile %}
-      <div>
-         <a href="{% url 'myauth:profile-update' pk=user.pk %}">Download a new avatar </a>
-          <p><a href="{% url 'myauth:users-list' %}">Users list</a></p>
-      </div>
+      <p>No avatar yet</p>
     {% endif %}
 
- </div>
-
-
+    {% if request.user.is_staff or perms.myauth.change_profile %}
+      <p><a href="{% url 'myauth:profile-update' pk=user.pk %}">Download a new avatar </a></p>
+      <p><a href="{% url 'myauth:users-list' %}">Users list</a></p>
+    {% endif %}
+</div>
+{% endif %}
 {% endblock %}

@@ -3,13 +3,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import UserPassesTestMixin, PermissionRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LogoutView
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseForbidden
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views.generic import TemplateView, CreateView, UpdateView, ListView, DetailView
 
-from .forms import ProfileForm
 from .models import Profile
 
 
@@ -17,7 +16,6 @@ class AboutMeView(TemplateView):
     template_name = 'myauth/about-me.html'
     queryset = Profile.objects.prefetch_related('images')
     context_object_name = 'about-me'
-    # model = Profile
 
 
 class UserListView(ListView):
@@ -55,18 +53,14 @@ class RegisterView(CreateView):
 
 class AvatarUpdateView(UserPassesTestMixin, UpdateView):
     def test_func(self):
-        # print(self.request.user)
-        # print(self.request.user.is_staff)
         if self.request.user.is_staff:
             return True
         self.object = self.get_object()
         if self.request.user.pk == self.object.user.pk:
             return True
         return False
-        # return self.request.user.is_superuser or (
-        #         self.request.user == Profile.objects.filter(user_id=self.request.user.id).exists())
+
     permission_required = 'myauth.change_profile'
-    # form_class = ProfileForm
     model = Profile
     fields = 'bio', 'avatar'
     template_name_suffix = "_update_form"
@@ -76,29 +70,16 @@ class AvatarUpdateView(UserPassesTestMixin, UpdateView):
             "myauth:user-details",
             kwargs={"pk": self.object.user.pk},
         )
-        # return reverse('myauth:about-me',
-        #                # kwargs={"pk": self.object.pk},
-        #                )
+
 
     def form_valid(self, form):
         user = form.save()
         response = super().form_valid(form)
-        # if self.request.user.is_superuser and not Profile.objects.filter(user_id=1).exists():
-        #     Profile.objects.create(user_id=1)
-        # elif not Profile.objects.filter(user_id=self.request.user.id).exists():
-        #     Profile.objects.create(user=self.object)
-        # elif self.request.user.is_superuser and Profile.objects.filter(user_id=1).exists():
-        #     for image in form.files.getlist('images'):
-        #         Profile.objects.get_or_create(
-        #             user=self.object,
-        #             image=image,
-        #         )
         for image in form.files.getlist('images'):
             Profile.objects.get_or_create(
                 user=self.object,
                 image=image,
             )
-
         return response
 
 

@@ -8,11 +8,12 @@
 <h2>Detail</h2>
 {% if user.profile.avatar  %}
     <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
+
+{% else %}
+    <p>No avatar yet</p>
 {% endif %}
 
-{% empty %}
-  <div>No images upload yet</div>
-{% endfor %}
+
 
     <p>Username: {{ user.username }}</p>
     <p>First name: {{ user.first_name }}</p>
@@ -21,13 +22,13 @@
     <p>Bio: {{ user.profile.bio }}</p>
 </div>
 
-{% if request.user.is_superuser %}
-      <div>
+<!--Если в реквесте пользователь администратор или юзер пк=текущему объекту пользователя и есть права-->
+    <div>
+        {% if request.user.is_superuser or self.request.user.pk == self.object.user.pk and request.user.is_staff %}
          <a href="{% url 'myauth:profile-update' pk=user.pk %}">Download a new avatar </a>
-          <p><a href="{% url 'myauth:users-list' %}">Users list</a></p>
-      </div>
-{% endif %}
-
+        {% endif %}
+    </div>
+ <p><a href="{% url 'myauth:users-list' %}">Users list</a></p>
 <div>
  <a href="{% url 'myauth:about-me' %}">Back to about me</a>
 </div>
