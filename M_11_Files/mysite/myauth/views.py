@@ -112,7 +112,6 @@ class MyLogoutView(LogoutView):
 
 @user_passes_test(lambda user: user.is_superuser)
 def set_cookie_view(request: HttpRequest) -> HttpResponse:
-    # if доступа нет - перенаправить или вернуть ошибку пользователю
     response = HttpResponse('Cookie set')
     response.set_cookie('fizz', 'buzz', max_age=3600)
     return response

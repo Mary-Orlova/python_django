@@ -15,7 +15,6 @@
 
     <div>
        <a href="{% url 'myauth:user-details' pk=user.pk %}">Name: {{ user }}</a>
-<!--       Userpk: {{ user.pk }}-->
        {% if user.avatar.user %}
             <img src="{{ user.avatar.url }}" alt="{{ user.avatar.user }}">
        {% endif %}
