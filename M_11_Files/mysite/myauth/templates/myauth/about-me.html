@@ -8,13 +8,24 @@
 {% block body %}
   <h1>User info</h1>
   {% if user.is_authenticated %}
+
     <h2>Detail</h2>
     <p>Username: {{ user.username }}</p>
     <p>First name: {{ user.first_name }}</p>
     <p>Last name: {{ user.last_name }}</p>
     <p>Email: {{ user.email }}</p>
     <p>Bio: {{ user.profile.bio }}</p>
-  {% else %}
-    <h2>User is anonymous</h2>
-  {% endif %}
+
+    {% if user.profile.avatar %}
+      <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="300" height="300">
+    {% else %}
+      <p>No avatar yet</p>
+    {% endif %}
+
+    {% if request.user.is_staff or perms.myauth.change_profile %}
+      <p><a href="{% url 'myauth:user-update' pk=user.pk %}">Download a new avatar </a></p>
+      <p><a href="{% url 'myauth:users-list' %}">Users list</a></p>
+    {% endif %}
+</div>
+{% endif %}
 {% endblock %}
