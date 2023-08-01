@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-01 17:18+0000\n"
+"POT-Creation-Date: 2023-08-01 20:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,31 +27,8 @@ msgstr "Английский"
 msgid "Russian"
 msgstr "Русский"
 
-#: shopapp/forms.py:9
-msgid "name"
-msgstr "наименование"
-
-#: shopapp/forms.py:9
-#| msgid "Price:"
-msgid "price"
-msgstr "Цена:"
-
-#: shopapp/forms.py:9
-#| msgid "Description:"
-msgid "description"
-msgstr "Описание:"
-
-#: shopapp/forms.py:9
-#| msgid "no discount"
-msgid "discount"
-msgstr "Без скидки"
-
-#: shopapp/forms.py:9
-msgid "preview"
-msgstr "Превью товара"
-
 #: shopapp/models.py:16 shopapp/templates/shopapp/products-details.html:5
-#: shopapp/templates/shopapp/products-details.html:13
+#: shopapp/templates/shopapp/products-details.html:31
 msgid "Product"
 msgstr "Продукт"
 
@@ -102,7 +79,7 @@ msgstr "Создать новый продукт"
 
 #: shopapp/templates/shopapp/create-product.html:21
 #: shopapp/templates/shopapp/product_form.html:20
-#: shopapp/templates/shopapp/products-details.html:32
+#: shopapp/templates/shopapp/products-details.html:49
 msgid "Back to products list"
 msgstr "Вернуться к списку продуктов"
 
@@ -256,7 +233,7 @@ msgstr "архивация"
 
 #: shopapp/templates/shopapp/product_update_form.html:5
 #: shopapp/templates/shopapp/product_update_form.html:9
-#: shopapp/templates/shopapp/products-details.html:24
+#: shopapp/templates/shopapp/products-details.html:41
 msgid "Update product"
 msgstr "Обновить продукт"
 
@@ -264,21 +241,48 @@ msgstr "Обновить продукт"
 msgid "Update"
 msgstr "Обновить"
 
-#: shopapp/templates/shopapp/products-details.html:14
+#: shopapp/templates/shopapp/products-details.html:11
+msgid ""
+"\n"
+"            There is only one image.\n"
+"            "
+msgid_plural ""
+"\n"
+"            The are %(product_images)s images.\n"
+"            "
+msgstr[0] ""
+"\n"
+"    Доступно %(count product_images)s изображение.\n"
+"    "
+msgstr[1] ""
+"\n"
+"    Доступно %(count product_images)s изображения.\n"
+"    "
+msgstr[2] ""
+"\n"
+"    Доступно %(count product_images)s изображений.\n"
+"    "
+
+#: shopapp/templates/shopapp/products-details.html:23
+msgid "There is only preview"
+msgstr "Доступно только превью"
+
+
+#: shopapp/templates/shopapp/products-details.html:32
 msgid "Description:"
 msgstr "Описание:"
 
-#: shopapp/templates/shopapp/products-details.html:15
+#: shopapp/templates/shopapp/products-details.html:33
 #: shopapp/templates/shopapp/products-list.html:25
 msgid "Price:"
 msgstr "Цена:"
 
-#: shopapp/templates/shopapp/products-details.html:16
+#: shopapp/templates/shopapp/products-details.html:34
 #: shopapp/templates/shopapp/products-list.html:27
 msgid "Discount:"
 msgstr "Скидка:"
 
-#: shopapp/templates/shopapp/products-details.html:28
+#: shopapp/templates/shopapp/products-details.html:45
 msgid "Archive product"
 msgstr "Архивировать продукт"
 
@@ -343,24 +347,20 @@ msgstr "Магазин Индекс"
 msgid "Hello Shop Index!"
 msgstr "Добро пожаловать в Магазин Индекс"
 
-#, python-format
-#~ msgid ""
-#~ "\n"
-#~ "      Trere is only one order.\n"
-#~ "      "
-#~ msgid_plural ""
-#~ "\n"
-#~ "      The are %(orders_count)s orders.\n"
-#~ "      "
-#~ msgstr[0] ""
-#~ "\n"
-#~ "    Доступен %(orders_count)s заказ.\n"
-#~ "    "
-#~ msgstr[1] ""
-#~ "\n"
-#~ "    Доступно %(orders_count)s заказа.\n"
-#~ "    "
-#~ msgstr[2] ""
-#~ "\n"
-#~ "    Доступно %(orders_count)s заказов.\n"
-#~ "    "
+#~ msgid "name"
+#~ msgstr "наименование"
+
+#~| msgid "Price:"
+#~ msgid "price"
+#~ msgstr "Цена:"
+
+#~| msgid "Description:"
+#~ msgid "description"
+#~ msgstr "Описание:"
+
+#~| msgid "no discount"
+#~ msgid "discount"
+#~ msgstr "Без скидки"
+
+#~ msgid "preview"
+#~ msgstr "Превью товара"

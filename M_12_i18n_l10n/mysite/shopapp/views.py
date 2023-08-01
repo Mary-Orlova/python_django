@@ -20,7 +20,8 @@ class ShopIndexView(View):
 
 class ProductDetailsView(DetailView):
     template_name = "shopapp/products-details.html"
-    model = Product
+    # model = Product
+    queryset = Product.objects.prefetch_related('images')
     context_object_name = "product"
 
 
@@ -59,9 +60,9 @@ class ProductUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView
         return self.request.user.is_superuser or (self.request.user == self.get_object().created_by)
     permission_required = 'shopapp.change_product'
     model = Product
-    fields = "name", "price", "description", "discount", 'preview'
+    # fields = "name", "price", "description", "discount", 'preview'
     template_name_suffix = "_update_form"
-    # form_class = ProductForm
+    form_class = ProductForm
 
     def get_success_url(self):
         return reverse(
