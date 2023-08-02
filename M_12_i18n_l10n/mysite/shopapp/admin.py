@@ -13,7 +13,6 @@ class OrderInline(admin.TabularInline):
 class ProductInline(admin.StackedInline):
     model = ProductImage
 
-
 @admin.action(description="Archive products")
 def mark_archived(modeladmin: admin.ModelAdmin, request: HttpRequest, queryset: QuerySet):
     queryset.update(archived=True)
@@ -48,8 +47,8 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
             "fields": ("price", "discount"),
             "classes": ("wide", "collapse"),
         }),
-        ("Images", {
-            "fields": ("preview", ),
+        ('Images', {
+            'fields': ('preview',),
         }),
         ("Extra options", {
             "fields": ("archived",),
@@ -64,10 +63,6 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
         return obj.description[:48] + "..."
 
 
-# admin.site.register(Product, ProductAdmin)
-
-
-# class ProductInline(admin.TabularInline):
 class ProductInline(admin.StackedInline):
     model = Order.products.through
 
