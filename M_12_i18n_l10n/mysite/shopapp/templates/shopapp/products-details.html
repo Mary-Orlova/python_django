@@ -11,16 +11,16 @@
          {% blocktranslate count product_images=product.images.all|length %}
             There is only one image.
             {% plural %}
-             There are {{ product_images }} img.
+             There are {{ product_images }} images.
             {% endblocktranslate %}
 
         {% if product.preview %}
         <div><img src="{{product.preview.url }}" alt="{{ product.preview.name }}" width="250"></div>
 
         {% if product.images %}
-            {% for img in product.images.all %}
-              <img src=" {{ img.image.url }}" alt="{{ img.image.name }}" width="250">
-              <div>{{ img.description }}</div>
+            {% for images in product.images.all %}
+              <img src=" {{ images.image.url }}" alt="{{ images.image.name }}" width="250">
+              <div>{{ images.description }}</div>
         {% empty %}
             <div> {% translate 'There is only preview' %}</div>
              {%  endfor %}

@@ -21,7 +21,7 @@ class ShopIndexView(View):
 class ProductDetailsView(DetailView):
     template_name = "shopapp/products-details.html"
     # model = Product
-    queryset = Product.objects.prefetch_related('images')
+    queryset = Product.objects.prefetch_related("images")
     context_object_name = "product"
 
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-01 20:00+0000\n"
+"POT-Creation-Date: 2023-08-02 16:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "Russian"
 msgstr "Russian"
 
 #: shopapp/models.py:16 shopapp/templates/shopapp/products-details.html:5
-#: shopapp/templates/shopapp/products-details.html:31
+#: shopapp/templates/shopapp/products-details.html:33
 msgid "Product"
 msgstr "Product"
 
@@ -78,7 +78,7 @@ msgstr "Create a new product"
 
 #: shopapp/templates/shopapp/create-product.html:21
 #: shopapp/templates/shopapp/product_form.html:20
-#: shopapp/templates/shopapp/products-details.html:49
+#: shopapp/templates/shopapp/products-details.html:51
 msgid "Back to products list"
 msgstr "Back to products list"
 
@@ -200,7 +200,7 @@ msgstr "archive"
 
 #: shopapp/templates/shopapp/product_update_form.html:5
 #: shopapp/templates/shopapp/product_update_form.html:9
-#: shopapp/templates/shopapp/products-details.html:41
+#: shopapp/templates/shopapp/products-details.html:43
 msgid "Update product"
 msgstr "Update product"
 
@@ -215,31 +215,30 @@ msgid ""
 "            "
 msgid_plural ""
 "\n"
-"            The are %(product_images)s images.\n"
+"             There are %(product_images)s images.\n"
 "            "
 msgstr[0] ""
 msgstr[1] ""
 
-
-#: shopapp/templates/shopapp/products-details.html:23
+#: shopapp/templates/shopapp/products-details.html:25
 msgid "There is only preview"
 msgstr "There is only preview"
 
-#: shopapp/templates/shopapp/products-details.html:32
+#: shopapp/templates/shopapp/products-details.html:34
 msgid "Description:"
 msgstr "Description:"
 
-#: shopapp/templates/shopapp/products-details.html:33
+#: shopapp/templates/shopapp/products-details.html:35
 #: shopapp/templates/shopapp/products-list.html:25
 msgid "Price:"
 msgstr "Price:"
 
-#: shopapp/templates/shopapp/products-details.html:34
+#: shopapp/templates/shopapp/products-details.html:36
 #: shopapp/templates/shopapp/products-list.html:27
 msgid "Discount:"
 msgstr "Discount:"
 
-#: shopapp/templates/shopapp/products-details.html:45
+#: shopapp/templates/shopapp/products-details.html:47
 msgid "Archive product"
 msgstr "Archive product"
 
@@ -255,7 +254,7 @@ msgstr "Products:"
 #, python-format
 msgid ""
 "\n"
-"    Trere is only one product.\n"
+"    There is only one product.\n"
 "    "
 msgid_plural ""
 "\n"
