@@ -15,14 +15,18 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
+
+app_name = 'mysite'
+
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/', include('shopapp.urls')),
-    path('myauth/', include('myauth.urls')),
+    path('accounts/', include('myauth.urls')),
 ]
+
 
 if settings.DEBUG:
     urlpatterns.extend(
