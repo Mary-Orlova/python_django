@@ -1,5 +1,3 @@
-from timeit import default_timer
-
 from django.contrib.auth.mixins import UserPassesTestMixin, PermissionRequiredMixin
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse, response
 from django.shortcuts import render, reverse
@@ -7,8 +5,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from myauth.models import Profile
-from .forms import ProductForm
-from .models import Product, Order, ProductImage
+from .models import Product, Order
 
 
 class ShopIndexView(View):
@@ -20,8 +17,7 @@ class ShopIndexView(View):
 
 class ProductDetailsView(DetailView):
     template_name = "shopapp/products-details.html"
-    # model = Product
-    queryset = Product.objects.prefetch_related("images")
+    model = Product
     context_object_name = "product"
 
 
@@ -30,20 +26,11 @@ class ProductsListView(ListView):
     context_object_name = "products"
     queryset = Product.objects.filter(archived=False)
 
-    def form_valid(self, form):
-        response = super().form_valid(form)
-        for image in form.files.getlist('images'):
-            ProductImage.objects.create(
-                product=self.object,
-                image=image,
-            )
-        return response
-
 
 class ProductCreateView(PermissionRequiredMixin, CreateView):
     permission_required = 'shopapp.add_product'
     model = Product
-    fields = "name", "price", "description", "discount", 'preview'
+    fields = "name", "price", "description", "discount"
     success_url = reverse_lazy("shopapp:products_list")
 
     def form_valid(self, form):
@@ -60,24 +47,14 @@ class ProductUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView
         return self.request.user.is_superuser or (self.request.user == self.get_object().created_by)
     permission_required = 'shopapp.change_product'
     model = Product
-    # fields = "name", "price", "description", "discount", 'preview'
+    fields = "name", "price", "description", "discount"
     template_name_suffix = "_update_form"
-    form_class = ProductForm
 
     def get_success_url(self):
         return reverse(
             "shopapp:product_details",
             kwargs={"pk": self.object.pk},
         )
-
-    def form_valid(self, form):
-        response = super().form_valid(form)
-        for image in form.files.getlist('images'):
-            ProductImage.objects.create(
-                product=self.object,
-                image=image,
-            )
-        return response
 
 
 class ProductDeleteView(DeleteView):

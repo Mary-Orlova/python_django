@@ -6,6 +6,7 @@ from .models import Product, Order, ProductImage
 from .admin_mixins import ExportAsCSVMixin
 
 
+
 class OrderInline(admin.TabularInline):
     model = Product.orders.through
 
@@ -48,8 +49,8 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
             "fields": ("price", "discount"),
             "classes": ("wide", "collapse"),
         }),
-        ("Images", {
-            "fields": ("preview", ),
+        ('Images', {
+            'fields': ('preview',),
         }),
         ("Extra options", {
             "fields": ("archived",),
@@ -64,10 +65,6 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
         return obj.description[:48] + "..."
 
 
-# admin.site.register(Product, ProductAdmin)
-
-
-# class ProductInline(admin.TabularInline):
 class ProductInline(admin.StackedInline):
     model = Order.products.through
 

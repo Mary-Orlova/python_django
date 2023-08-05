@@ -1,21 +1,20 @@
 {% extends 'shopapp/base.html' %}
 
-{% load i18n %}
 {% block title %}
-  {% translate 'Shop Index' %}
+  Shop Index
 {% endblock %}
 
 
 {% block body %}
-  <h1>{% translate 'Hello Shop Index!' %}</h1>
+  <h1>Hello Shop Index!</h1>
 
   <div>
     <ul>
       <li>
-        <a href="{% url 'shopapp:products_list' %}">{% translate 'Products' %}</a>
+        <a href="{% url 'shopapp:products_list' %}">Products</a>
       </li>
       <li>
-        <a href="{% url 'shopapp:orders_list' %}">{% translate 'Orders' %}</a>
+        <a href="{% url 'shopapp:orders_list' %}">Orders</a>
       </li>
     </ul>
   </div>
