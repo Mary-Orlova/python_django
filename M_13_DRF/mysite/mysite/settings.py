@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +43,10 @@ INSTALLED_APPS = [
 
     'shopapp.apps.ShopappConfig',
     'myauth.apps.MyauthConfig',
+    'requestdataapp.apps.RequestdataappConfig',
+    "rest_framework",
+    'django_filters',
+    'mapiapp.apps.MapiappConfig',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -116,16 +122,24 @@ USE_I18N = True
 
 USE_TZ = True
 
+USE_L1ON = True
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/'
+]
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('ru', _('Russian')),
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
-
-MEDIA_URL = '/media/'
+MEDIA_URL ='/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
-# DEFAULT_FILE_STORAGE =
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -134,3 +148,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy("myauth:about-me")
 LOGIN_URL = reverse_lazy("myauth:login")
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}

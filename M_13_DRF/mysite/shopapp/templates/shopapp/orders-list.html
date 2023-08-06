@@ -1,0 +1,47 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+{% block title %}
+  {% translate 'Orders list' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% translate 'Orders:' %}</h1>
+  {% if orders %}
+    <div>
+        {% blocktranslate count orders_count=orders|length %}
+        Trere is only one order.
+        {% plural %}
+        The are {{ orders_count }} orders.
+        {% endblocktranslate %}
+      </div>
+
+      {% for order in orders %}
+        <div>
+          <p><a href="{% url 'shopapp:order_details' pk=order.pk %}"
+          >{% translate 'Order by:' %} {% firstof order.user.first_name order.user.username %} </a></p>
+
+          <div>
+            {% translate 'Product in order:' %}
+            <ul>
+              {% for product in order.products.all %}
+                <li>{{ product.name }} for ${{ product.price }}</li>
+              {% endfor %}
+
+            </ul>
+          </div>
+
+        </div>
+      {% endfor %}
+
+    </div>
+
+{% else %}
+{% url 'shopapp:order_create' as create_order_url %}
+{% blocktranslate %}
+    <h3>No orders yet</h3>
+    <a href={{create_order_url}}>Create a new order</a>
+{% endblocktranslate %}
+
+{% endif %}
+{% endblock %}
