@@ -1,8 +1,10 @@
+"""
+Подключение путей для приложения shopapp.
+"""
+
+
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-
-app_name = 'shopapp'
-
 from .views import (
     ShopIndexView,
     ProductDetailsView,
@@ -20,6 +22,9 @@ from .views import (
     ProductViewSet,
     OrderViewSet,
 )
+
+app_name = 'shopapp'
+
 
 routers = DefaultRouter()
 routers.register('products', ProductViewSet)

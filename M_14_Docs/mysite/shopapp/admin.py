@@ -1,7 +1,11 @@
+"""
+Различные классы Администратора
+"""
+
+
 from django.contrib import admin
 from django.db.models import QuerySet
 from django.http import HttpRequest
-
 from .models import Product, Order, ProductImage
 from .admin_mixins import ExportAsCSVMixin
 
@@ -12,6 +16,7 @@ class OrderInline(admin.TabularInline):
 
 class ProductInline(admin.StackedInline):
     model = ProductImage
+
 
 @admin.action(description="Archive products")
 def mark_archived(modeladmin: admin.ModelAdmin, request: HttpRequest, queryset: QuerySet):

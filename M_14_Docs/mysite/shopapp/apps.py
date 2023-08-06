@@ -1,3 +1,8 @@
+"""
+Конфигурация приложения shopapp.
+"""
+
+
 from django.apps import AppConfig
 
 

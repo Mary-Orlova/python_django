@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
@@ -46,7 +45,9 @@ INSTALLED_APPS = [
     'requestdataapp.apps.RequestdataappConfig',
     "rest_framework",
     'django_filters',
-    'mapiapp.apps.MapiappConfig',
+    'myapiapp.apps.MyapiappConfig',
+    'drf_spectacular',
+
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,7 @@ LANGUAGES = [
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIA_URL ='/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
 
 # Default primary key field type
@@ -153,4 +154,12 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_SCHEME_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'My Site Project API',
+    'DESCRIPTION': 'My site with shop app and custom auth',
+    'VERSION': '1.0.0.',
+    'SERVE_INCLUDE_SCHEMA': False,
 }

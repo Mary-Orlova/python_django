@@ -1,5 +1,9 @@
-from django.urls import path
+"""
+Подключение различных страниц приложения requestdataapp.
+"""
 
+
+from django.urls import path
 from .views import process_get_view, user_form, handle_file_upload
 
 app_name = "requestdataapp"

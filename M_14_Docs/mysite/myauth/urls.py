@@ -1,3 +1,8 @@
+"""
+Подключения для различных представлений приложения myauth.
+"""
+
+
 from django.urls import path
 from django.contrib.auth.views import LoginView
 

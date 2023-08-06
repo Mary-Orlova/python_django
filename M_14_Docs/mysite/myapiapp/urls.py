@@ -1,8 +1,11 @@
-from django.urls import path
+"""
+Пути подключения для представлений приложения mapiapp.
+"""
 
+from django.urls import path
 from .views import hello_world_view, GroupsListView
 
-app_name = 'mapiapp'
+app_name = 'myapiapp'
 
 urlpatterns = [
     path('hello/', hello_world_view, name='hello'),

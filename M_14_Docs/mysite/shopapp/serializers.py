@@ -1,3 +1,8 @@
+"""
+Серилизатор для модели Продукта и модели Заказ.
+"""
+
+
 from rest_framework import serializers
 from .models import Product, Order
 
@@ -15,6 +20,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'archived',
             'preview',
         )
+
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:

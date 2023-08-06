@@ -1,10 +1,12 @@
+"""
+Тесты для моделей shopapp.
+"""
+
+
 from django.contrib.auth.models import User, Permission
 from django.test import TestCase
 from django.urls import reverse
-from requests import request
-from django.core import serializers
-
-from shopapp.models import Order, Product
+from .models import Order, Product
 
 
 class OrderDetailView(TestCase):
@@ -29,7 +31,7 @@ class OrderDetailView(TestCase):
         )
 
     def tearDown(self):
-       self.order.delete()
+        self.order.delete()
 
 
 class OrdersExportTestCase(TestCase):
@@ -62,7 +64,7 @@ class OrdersExportTestCase(TestCase):
                 'delivery_address': order.delivery_address,
                 'promocode': order.promocode,
                 'user': order.user.pk,
-                 'products': [product.pk for product in order.products.all()]
+                'products': [product.pk for product in order.products.all()]
             }
             for order in orders
             ]
@@ -73,7 +75,6 @@ class OrdersExportTestCase(TestCase):
 
         self.assertEqual(order_data, expected_data)
         # self.assertEqual(orders_data['orders'], expected_data)
-
 
     @classmethod
     def tearDownClass(cls):
