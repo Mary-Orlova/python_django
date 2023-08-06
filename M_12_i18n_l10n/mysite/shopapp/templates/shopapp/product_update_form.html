@@ -1,22 +1,23 @@
 {% extends 'shopapp/base.html' %}
 
+{% load i18n %}
 {% block title %}
- Update product
+ {% translate 'Update product' %}t
 {% endblock %}
 
 {% block body %}
-<h1>Update product</h1>
+<h1>{% translate 'Update product' %}</h1>
 
 <div>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit">Update</button>
+        <button type="submit">{% translate 'Update' %}</button>
     </form>
 </div>
 
 <div>
-    <a href="{% url 'shopapp:product_details' pk=object.pk %}">Back to product #{{object.pk }}</a>
+    <a href="{% url 'shopapp:product_details' pk=object.pk %}">{% translate 'Back to product' %} #{{object.pk }}</a>
 </div>
 
 {% endblock %}
