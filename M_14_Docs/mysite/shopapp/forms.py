@@ -1,3 +1,8 @@
+"""
+Форма для продуктов с подключением картинок с многовариантным выбором.
+"""
+
+
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from shopapp.models import Product

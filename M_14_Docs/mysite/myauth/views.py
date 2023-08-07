@@ -1,14 +1,20 @@
+"""
+В этом модуле лежат различные представления.
+
+Разные view для пользователей: информация о себе/регистрация/лист пользователей и тд.
+"""
+
+
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.mixins import UserPassesTestMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LogoutView
-from django.http import HttpRequest, HttpResponse, HttpResponseForbidden
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views.generic import TemplateView, CreateView, UpdateView, ListView, DetailView
-
 from .models import Profile
 
 
@@ -22,6 +28,7 @@ class UserListView(ListView):
     template_name = 'myauth/users-list.html'
     model = User
     context_object_name = "Users"
+
 
 class UserDetailsView(DetailView):
     template_name = "myauth/user-details.html"
@@ -70,7 +77,6 @@ class AvatarUpdateView(UserPassesTestMixin, UpdateView):
             "myauth:user-details",
             kwargs={"pk": self.object.user.pk},
         )
-
 
     def form_valid(self, form):
         user = form.save()

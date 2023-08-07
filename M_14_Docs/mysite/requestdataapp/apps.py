@@ -1,3 +1,8 @@
+"""
+Конфигурация приложения requestdataapp.
+"""
+
+
 from django.apps import AppConfig
 
 

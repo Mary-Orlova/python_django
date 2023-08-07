@@ -1,3 +1,8 @@
+"""
+В этом модуле лежит система хуков для обработки запросов/ответов в Django.
+"""
+
+
 import time
 from django.http import HttpRequest
 from django.shortcuts import render

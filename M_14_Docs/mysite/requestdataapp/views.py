@@ -1,3 +1,9 @@
+"""
+Различные представления приложения requestdataapp.
+"""
+
+
+
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render

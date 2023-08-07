@@ -1,3 +1,10 @@
+"""
+В этом модуле лежат различные представления.
+
+Разные view для интернет-магазина: по товарам, заказам и тд.
+"""
+
+
 from timeit import default_timer
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import reverse, render
@@ -8,14 +15,19 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.viewsets import ModelViewSet
-
 from myauth.models import Profile
 from .forms import ProductForm
 from .models import Product, Order, ProductImage
 from .serializers import OrderSerializer, ProductSerializer
+from drf_spectacular.utils import extend_schema, OpenApiResponse
 
 
+@extend_schema(description='Product views CRUD')
 class ProductViewSet(ModelViewSet):
+    """
+    Набор представлений для действий над product
+    Полрый CRUD для сущностей товара
+    """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [
@@ -35,6 +47,17 @@ class ProductViewSet(ModelViewSet):
         'price',
         'discount',
     ]
+
+    @extend_schema(
+     summary='Get one product by ID',
+     description='Retrives **product**, return 404 if not found',
+     responses={
+        202: ProductSerializer,
+        404: OpenApiResponse(description='Empty response, product by id not found'),
+        }
+    )
+    def retrieve(self, *args, **kwargs):
+        return super().retrieve(*args, **kwargs)
 
 
 class OrderViewSet(ModelViewSet):
@@ -189,10 +212,11 @@ class OrderDetailView(PermissionRequiredMixin, DetailView):
     model = Order
     context_object_name = "order"
 
+
 class ProductsDataExportView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
         products = Product.objects.order_by('pk').all()
-        products_data =[
+        products_data = [
             {
                 'pk': product.pk,
                 'name': product.name,

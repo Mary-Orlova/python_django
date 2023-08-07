@@ -1,5 +1,9 @@
-import csv
+"""
+Реквест для админа.
+"""
 
+
+import csv
 from django.db.models import QuerySet
 from django.db.models.options import Options
 from django.http import HttpRequest, HttpResponse

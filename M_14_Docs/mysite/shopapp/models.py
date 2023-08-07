@@ -1,3 +1,11 @@
+"""
+Различные модели приложения shopapp.
+
+
+Путь-генерация для продукта+ модель Продукта + путь для картинок + модель Картинок + модель Заказов.
+"""
+
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -28,11 +36,13 @@ class Product(models.Model):
     def __str__(self):
         return f"Product(pk={self.pk}, name={self.name!r})"
 
+
 def product_images_directory_path(instance: 'ProductImage', filename: str) -> str:
     return 'products/products_{pk}/images/{filename}'.format(
         pk=instance.product.pk,
         filename=filename,
     )
+
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
