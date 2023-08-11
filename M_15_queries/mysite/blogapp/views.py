@@ -13,14 +13,19 @@ from blogapp.models import Article
 
 class ArticleDetailsView(DetailView):
     template_name = "blogapp/article_details.html"
-    queryset = Article.objects.prefetch_related("bio")
+    queryset = (
+        Article
+        .objects
+        .select_related('category')
+        .prefetch_related('author')
+    )
     context_object_name = "article"
 
 
 class ArticleListView(ListView):
     template_name = 'blogapp/article_list.html'
     context_object_name = 'article'
-    queryset = Article.objects.all()
+    queryset = Article.objects.defer('content').all()
 
 
 class ArticleCreateView(CreateView):
@@ -34,7 +39,7 @@ class ArticleUpdateView(UserPassesTestMixin, PermissionRequiredMixin, UpdateView
         return self.request.user.is_superuser or (self.request.user == self.get_object().created_by)
     permission_required = 'blogapp.change_article'
     model = Article
-    fields = 'title', 'content', 'pub_date', 'author', 'category', 'tags'
+    fields = 'title', 'content', 'author', 'category', 'tags'
     template_name_suffix = "_update_form"
 
     def get_success_url(self):

@@ -5,20 +5,21 @@
  {% translate 'Article details' %} #{{ article.pk }}
 {% endblock %}
 
-{% extends 'blogapp/base.html' %}
-
-
 {% block body %}
   <h1>{% translate 'Articles:' %}</h1>
-   {% if articles %}
+   {% if article %}
       <div>
          <h2>{{ article.title }}</h2>
-         <p>{% translate 'Author:' %}</p> {{ article.author}}
-         <p>{% translate 'Category:' %}</p> {{ article.category.name }}
-         <p>{% translate 'Public date:' %}</p> {{ article.pub_date }}
+         <p>{% translate 'Author:' %} {{ article.author}} </p>
+         <p>{% translate 'Category:' %} {{ article.category.name }} </p>
+         <p>{% translate 'Public date:' %}{{ article.pub_date }} </p>
+
+          <div>
+              <p>{{ article.content }}</p>
+          </div>
 
          {% if article.tags %}
-         <p>{% translate 'Tags:' %}</p>
+         {% translate 'Tags:' %}
          {% for tag in article.tags.all %}
          {{ tag.name }}
          {% endfor %}
@@ -26,6 +27,7 @@
          {% else %}
          <p>{% translate 'The article without tags' %}</p>
          {% endif %}
+          <br></br>
       </div>
 
    {% else %}
