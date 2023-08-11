@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_filters',
     'myapiapp.apps.MyapiappConfig',
     'drf_spectacular',
+    'blogapp.apps.BlogappConfig',
 
 ]
 

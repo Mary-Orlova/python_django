@@ -15,14 +15,28 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from django.contrib import admin
 from django.urls import path, include
 
+app_name = 'mysite'
+
+
 urlpatterns = [
+    path('req/', include('requestdataapp.urls')),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/schema/swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger'),
+    path('accounts/', include('myauth.urls')),
+    path('api/', include('myapiapp.urls')),
+]
+
+urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('shop/', include('shopapp.urls')),
-    path('myauth/', include('myauth.urls')),
-]
+    path('blog/', include('blogapp.urls')),
+)
+
 
 if settings.DEBUG:
     urlpatterns.extend(

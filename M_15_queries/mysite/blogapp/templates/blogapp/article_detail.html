@@ -1,0 +1,47 @@
+{% extends 'blogapp/base.html' %}
+
+{% load i18n %}
+{% block title %}
+ {% translate 'Article details' %} #{{ article.pk }}
+{% endblock %}
+
+{% extends 'blogapp/base.html' %}
+
+
+{% block body %}
+  <h1>{% translate 'Articles:' %}</h1>
+   {% if articles %}
+      <div>
+         <h2>{{ article.title }}</h2>
+         <p>{% translate 'Author:' %}</p> {{ article.author}}
+         <p>{% translate 'Category:' %}</p> {{ article.category.name }}
+         <p>{% translate 'Public date:' %}</p> {{ article.pub_date }}
+
+         {% if article.tags %}
+         <p>{% translate 'Tags:' %}</p>
+         {% for tag in article.tags.all %}
+         {{ tag.name }}
+         {% endfor %}
+
+         {% else %}
+         <p>{% translate 'The article without tags' %}</p>
+         {% endif %}
+      </div>
+
+   {% else %}
+      <p>{% translate 'No articles now' %}</p>
+   {% endif %}
+
+<div>
+ <a href="{% url 'blogapp:article_update' pk=article.pk %}">{% translate 'Update article' %}</a>
+</div>
+
+<div>
+ <a href="{% url 'blogapp:article_delete' pk=article.pk %}">{% translate 'Archive article' %}</a>
+</div>
+
+<div>
+ <a href="{% url 'blogapp:article_list' %}">{% translate 'Back to articles list' %}</a>
+</div>
+
+{% endblock %}
