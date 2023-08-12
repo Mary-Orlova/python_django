@@ -16,8 +16,8 @@ class ArticleDetailsView(DetailView):
     queryset = (
         Article
         .objects
-        .select_related('category')
         .prefetch_related('author')
+        .all()
     )
     context_object_name = "article"
 
@@ -25,10 +25,18 @@ class ArticleDetailsView(DetailView):
 class ArticleListView(ListView):
     template_name = 'blogapp/article_list.html'
     context_object_name = 'article'
-    queryset = Article.objects.defer('content').all()
+    queryset = (
+        Article
+        .objects
+        .select_related('category')
+        .select_related('author')
+        .defer('content')
+        .all()
+    )
 
 
 class ArticleCreateView(CreateView):
+    template_name = 'blogapp/article_create.html'
     model = Article
     fields = 'title', 'content', 'author', 'category', 'tags'
     success_url = reverse_lazy("blogapp:article_list")
