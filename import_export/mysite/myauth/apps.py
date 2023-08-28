@@ -1,0 +1,17 @@
+"""
+Конфигурации приложения myauth и пользователей(использование сигналов).
+"""
+
+from django.apps import AppConfig
+
+
+class MyauthConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'myauth'
+
+
+class UsersConfig(AppConfig):
+    name = 'users'
+
+    def ready(self):
+        import myauth.signals

@@ -1,0 +1,40 @@
+{% load i18n %}
+{% block title %}
+{% translate 'Order details' %} #{{ object.pk }}
+{% endblock %}
+
+{% block body %}
+<h1>{% translate 'Order' %} #{{ object.pk }} </h1>
+<div>
+    <p>{% translate 'Order by' %} {% firstof object.user.first_name object.user.username %}</p>
+    <p>{% translate 'Promocode:' %} <code>{{ object.promocode }}</code></p>
+    <p>{% translate 'Delivery address:' %} {{ object.delivery_address }}</p>
+    <div>
+        {% translate 'Product in order:' %}
+
+        {% blocktranslate count orders_count=orders|length %}
+        There is only one order.
+        {% plural %}
+        The are {{ orders_count }} orders.
+        {% endblocktranslate %}
+        <ul>
+            {% for product in object.products.all %}
+            <li>{{ product.name }} for ${{ product.price }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div>
+ <a href="{% url 'shopapp:order_update' pk=order.pk %}"> {% translate 'Update order' %}</a>
+</div>
+
+<div>
+ <a href="{% url 'shopapp:order_delete' pk=order.pk %}"> {% translate 'Delete order' %}</a>
+</div>
+<div>
+    <a href="{% url 'shopapp:orders_list' %}"> {% translate 'Back to orders' %}</a>
+</div>
+
+{% endblock %}
+
