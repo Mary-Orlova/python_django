@@ -1,0 +1,54 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+{% block title %}
+ {% translate 'Product' %} #{{ product.pk }}
+{% endblock %}
+
+{% block body %}
+<div>
+    <div>
+         {% blocktranslate count product_images=product.images.all|length %}
+            There is only one image.
+            {% plural %}
+             There are {{ product_images }} images.
+            {% endblocktranslate %}
+
+        {% if product.preview %}
+        <div><img src="{{product.preview.url }}" alt="{{ product.preview.name }}" width="250"></div>
+
+        {% if product.images %}
+            {% for images in product.images.all %}
+              <img src=" {{ images.image.url }}" alt="{{ images.image.name }}" width="250">
+              <div>{{ images.description }}</div>
+        {% empty %}
+            <div> {% translate 'There is only preview' %}</div>
+             {%  endfor %}
+        {% endif %}{% endif %}
+
+   </div>
+</div>
+ </div>
+
+    <h1>{% translate 'Product' %} <strong> {{ product.name }} </strong></h1>
+    <div>{% translate 'Description:' %} <em>{{ product.description }} </em></div>
+    <div>{% translate 'Price:' %} {{ product.price }} </div>
+    <div>{% translate 'Discount:' %} {{ product.discount }} </div>
+    {% for product in products %}
+</div>
+
+{% endfor %}
+
+<div>
+ <a href="{% url 'shopapp:product_update' pk=product.pk %}">{% translate 'Update product' %}</a>
+</div>
+
+<div>
+ <a href="{% url 'shopapp:product_delete' pk=product.pk %}">{% translate 'Archive product' %}</a>
+</div>
+
+<div>
+ <a href="{% url 'shopapp:products_list' %}">{% translate 'Back to products list' %}</a>
+</div>
+
+{% endblock %}
