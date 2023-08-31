@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'django.contrib.staticfiles',
 
+    'django.contrib.sitemaps',
     'shopapp.apps.ShopappConfig',
     'myauth.apps.MyauthConfig',
     'requestdataapp.apps.RequestdataappConfig',

@@ -6,10 +6,12 @@ from shopapp.models import Order
 class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Create order")
-        user = User.objects.get(username="admin")
+        self.object = self.get_object()
+
+        user = User.objects.get(pk=self.pk)
         order = Order.objects.get_or_create(
-            delivery_address="ul Pupkina, d 8",
-            promocode="SALE123",
+            delivery_address="ul Pravdy, d 12",
+            promocode="SALE10",
             user=user,
         )
         self.stdout.write(f"Created order {order}")

@@ -1,0 +1,1288 @@
+2023-08-28 22:46:41,292 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-28 22:47:16,069 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-28 22:47:17,548 [WARNING] django.request Not Found: /
+2023-08-28 22:47:20,677 [WARNING] django.request Not Found: /sh
+2023-08-28 22:47:24,799 [ERROR] django.request Internal Server Error: /ru/shop/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:52,048 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/desktop-3_Dj5PQqg.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:52,061 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/istockphoto-479520746-612x612.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:52,126 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/HPTablet11-be__1_.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:52,129 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/laptop-red_i052il5.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:52,132 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/Gaming-Mouse.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:52,134 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:47:56,772 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/desktop-3_Dj5PQqg.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:23,292 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/desktop-3_Dj5PQqg.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:32,513 [ERROR] django.request Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:47,413 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/Gaming-Mouse.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:47,426 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/istockphoto-479520746-612x612.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:47,445 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/desktop-3_Dj5PQqg.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:47,453 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/laptop-red_i052il5.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:47,465 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/HPTablet11-be__1_.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:47,479 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:52,409 [ERROR] django.request Internal Server Error: /ru/admin/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:49:57,645 [WARNING] django.request Not Found: /login/
+2023-08-28 22:50:11,034 [WARNING] django.request Not Found: /accounts/
+2023-08-28 22:50:18,218 [ERROR] django.request Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:50:31,231 [ERROR] django.request Internal Server Error: /accounts/about-me/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:50:42,401 [ERROR] django.request Internal Server Error: /media/profile/avatar_profile1/1690242353_beolin-club-p-starie-risunki-kompyutera-instagram-46.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:50:48,502 [ERROR] django.request Internal Server Error: /accounts/user/1/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:50:53,617 [ERROR] django.request Internal Server Error: /accounts/user/1/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:50:58,226 [ERROR] django.request Internal Server Error: /accounts/user/1/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:51:03,160 [ERROR] django.request Internal Server Error: /accounts/user/1/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:51:09,967 [ERROR] django.request Internal Server Error: /accounts/user/1/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:51:43,288 [ERROR] django.request Internal Server Error: /accounts/user/1/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:51:48,471 [ERROR] django.request Internal Server Error: /accounts/user/2/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:52:00,555 [ERROR] django.request Internal Server Error: /media/profile/avatar_profile2/1690242364_beolin-club-p-starie-risunki-kompyutera-instagram-31.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:52:04,961 [ERROR] django.request Internal Server Error: /accounts/user/2/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myauth/profile_update_form.html
+2023-08-28 22:52:13,387 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-28 22:54:32,735 [WARNING] django.request Not Found: /ru/accounts/user/2/update/
+2023-08-28 22:54:38,835 [ERROR] django.request Internal Server Error: /ru/blog/articles/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:54:40,265 [ERROR] django.request Internal Server Error: /ru/blog/articles/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:54:56,277 [ERROR] django.request Internal Server Error: /ru/blog/article/4/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:42,286 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/HPTablet11-be__1_.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:42,306 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/desktop-3_Dj5PQqg.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:42,320 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/Gaming-Mouse.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:42,340 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/istockphoto-479520746-612x612.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:42,348 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/laptop-red_i052il5.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:42,361 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:47,339 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:55:49,452 [ERROR] django.request Internal Server Error: /ru/shop/products/3/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:56:13,741 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/models.py changed, reloading.
+2023-08-28 22:56:14,544 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-28 22:56:21,200 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:56:23,020 [ERROR] django.request Internal Server Error: /ru/shop/products/3/update/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:56:56,614 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/models.py changed, reloading.
+2023-08-28 22:56:57,169 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-28 22:57:05,368 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:07,168 [ERROR] django.request Internal Server Error: /ru/shop/products/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:15,300 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/desktop-3_Dj5PQqg.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:15,406 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/phone.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:15,413 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/HPTablet11-be__1_.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:15,416 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/Gaming-Mouse.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:15,418 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/laptop-red_i052il5.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:15,421 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/istockphoto-479520746-612x612.jpeg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:57:17,133 [ERROR] django.request Internal Server Error: /ru/shop/products/2/
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 22:59:03,952 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-28 22:59:06,562 [ERROR] django.request Internal Server Error: /media/product_preview_directory_path/laptop-red_i052il5.jpg
+Traceback (most recent call last):
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mariaorlova/PycharmProjects/python_django/M_03_DatabaseAndModels/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-28 23:01:07,884 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-28 23:01:08,508 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-28 23:07:46,505 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-28 23:07:47,156 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:06:55,500 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:09:05,709 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:09:33,344 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/sitemaps.py changed, reloading.
+2023-08-29 17:09:33,776 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:09:42,914 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:14:23,765 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:15:55,347 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-29 17:15:55,773 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:16:06,438 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:16:40,503 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:18:00,899 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-29 17:18:01,532 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:23:20,386 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:26:58,441 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:30:28,078 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-29 17:30:29,105 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:31:43,828 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-29 17:31:45,058 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:37:05,079 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/settings.py changed, reloading.
+2023-08-29 17:37:06,272 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:37:24,846 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/sitemaps.py changed, reloading.
+2023-08-29 17:37:25,755 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:37:38,619 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/mysite/sitemaps.py changed, reloading.
+2023-08-29 17:37:39,545 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:39:46,031 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 17:43:10,106 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/sitemap.py changed, reloading.
+2023-08-29 17:43:11,381 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 17:50:16,011 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 17:53:07,460 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/views.py changed, reloading.
+2023-08-29 17:53:08,628 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-29 18:00:46,044 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 18:11:15,954 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 18:21:38,835 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 18:32:08,831 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 18:42:38,814 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 18:53:08,795 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 19:03:38,800 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 19:14:08,805 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 19:24:38,793 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 19:35:08,786 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 19:56:06,559 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 20:06:36,513 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 20:21:41,402 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 20:38:26,470 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 21:44:13,211 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-29 23:06:08,978 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 00:30:34,712 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 01:52:38,504 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 03:15:48,332 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 04:41:12,049 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 06:04:34,522 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 07:28:46,104 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 08:51:59,787 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 09:24:00,826 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 09:39:48,333 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 10:27:04,384 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 11:48:39,099 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 12:27:32,656 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 13:13:01,176 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 13:43:52,354 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 14:08:22,650 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 14:37:38,112 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 14:48:08,072 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 14:52:16,776 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/urls.py changed, reloading.
+2023-08-30 14:52:18,406 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-30 14:58:38,107 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 15:15:51,525 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 15:37:51,162 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 16:27:08,332 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 16:54:13,762 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 17:11:59,633 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 17:22:21,383 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 17:32:51,360 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 17:38:11,657 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/forms.py changed, reloading.
+2023-08-30 17:38:12,993 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-30 17:43:21,383 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 17:53:51,326 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 18:04:21,322 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 18:56:22,654 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 19:35:03,888 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 20:16:46,483 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 21:11:59,875 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 21:59:38,712 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-30 22:52:19,045 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 00:03:22,698 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 01:28:09,545 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 02:49:00,467 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 03:47:17,407 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 05:24:52,907 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 06:00:08,802 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 06:10:12,899 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 06:20:42,878 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 06:24:02,635 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:24:03,793 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 06:27:37,041 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:27:38,320 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 06:31:04,773 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:31:05,883 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 06:31:12,886 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 06:33:48,177 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:33:49,160 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 06:36:43,078 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:36:44,186 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 06:38:29,895 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:38:30,854 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 06:41:42,917 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 06:43:18,933 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 06:43:20,142 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 07:05:13,922 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 07:28:38,634 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 07:30:05,655 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 07:30:06,698 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 07:33:11,802 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 07:33:13,045 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 07:33:32,431 [WARNING] django.request Not Found: /
+2023-08-31 07:33:32,886 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:33:36,067 [ERROR] django.request Internal Server Error: /ru/admin/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:33:36,216 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:33:44,170 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:33:50,574 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:33:50,722 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:36:57,828 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 07:37:03,647 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:37:03,774 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 07:39:08,628 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 07:49:38,595 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 07:49:39,101 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/urls.py changed, reloading.
+2023-08-31 07:49:40,403 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 07:49:43,309 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/product/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/products_changelist.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 75, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/products_changelist.html
+2023-08-31 07:49:43,679 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:08,582 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 08:00:34,505 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:34,729 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:37,729 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:37,831 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:38,542 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/product/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:38,680 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:46,684 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:46,787 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:49,048 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/product/import-products-csv/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:49,186 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:00:58,182 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:02:49,156 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:02:49,273 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:02:57,236 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:02:57,337 [ERROR] django.request Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-08-31 08:10:38,576 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 08:20:40,449 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-08-31 08:26:46,666 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 08:26:48,031 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 08:28:21,321 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 08:28:22,267 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-08-31 08:38:59,131 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
+2023-08-31 08:39:00,301 [INFO] django.utils.autoreload Watching for file changes with StatReloader
