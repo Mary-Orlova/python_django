@@ -63,8 +63,13 @@ class Order(models.Model):
     promocode = models.CharField(max_length=20, null=False, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    products = models.ManyToManyField(Product, related_name="orders")
+    products = models.ManyToManyField(Product, through='Product_order', related_name="orders")
     receipt = models.FileField(null=True, upload_to='orders/receipts/')
 
     def get_absolute_url(self):
         return reverse('shopapp:order_details', kwargs={'pk': self.pk})
+
+
+class Product_order(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order,on_delete=models.CASCADE)

@@ -1,6 +1,7 @@
 """
 Различные классы Администратора для Продуктов и заказов.
 """
+import random
 from csv import DictReader
 from io import TextIOWrapper
 
@@ -10,7 +11,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import path
 
-from .models import Product, Order, ProductImage
+from .models import Product, Order, ProductImage, Product_order
 from .admin_mixins import ExportAsCSVMixin
 from .forms import CSVImportForm
 
@@ -149,9 +150,13 @@ class OrderAdmin(admin.ModelAdmin):
             self.model(**row)
             for row in reader
         ]
-        # создаем заказ
-        self.model.objects.bulk_create(order_new)
-        #привязываем заказ к товарам
+        # создаем заказ  self.model.objects.bulk_create(order_new)
+        #привязываем заказ к товарам через промежуточную таблицу Product_order(в model.py),
+        # в класс Order был указан путь through='Product_order'
+        product_neworder = random.choice(Product.all())
+        order_now = Product_order(
+            order=self.model.objects.bulk_create(order_new),
+            product=product_neworder)
 
         self.message_user(request, "Data from CSV was imported")
         return redirect("..")
