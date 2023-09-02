@@ -4,14 +4,16 @@
 import random
 from csv import DictReader
 from io import TextIOWrapper
+from typing import Sequence
 
 from django.contrib import admin
+from django.contrib.auth.models import User
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import path
 
-from .models import Product, Order, ProductImage, Product_order
+from .models import Product, Order, ProductImage
 from .admin_mixins import ExportAsCSVMixin
 from .forms import CSVImportForm
 
@@ -69,6 +71,11 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
         })
     ]
 
+    def description_short(self, obj: Product) -> str:
+        if len(obj.description) < 48:
+            return obj.description
+        return obj.description[:48] + "..."
+
     def import_csv(self, request: HttpRequest) -> HttpResponse:
         if request.method == 'GET':
             form = CSVImportForm()
@@ -87,6 +94,14 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
             form.files['csv_file'].file,
             encoding=request.encoding,
         )
+
+        reader = DictReader(csv_file)
+        products = [
+            Product(**row)
+            for row in reader
+        ]
+        Product.objects.bulk_create(products)
+
         self.message_user(request, 'Data from CSV was imported')
         return redirect('..')
 
@@ -101,11 +116,6 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
             ),
         ]
         return new_urls + urls
-
-    def description_short(self, obj: Product) -> str:
-        if len(obj.description) < 48:
-            return obj.description
-        return obj.description[:48] + "..."
 
 
 class ProductInline(admin.StackedInline):
@@ -141,26 +151,24 @@ class OrderAdmin(admin.ModelAdmin):
             return render(request, 'admin/csv_form.html', context, status=400)
 
         csv_file = TextIOWrapper(
-            form.files.get("csv_file").file,
+            form.files["csv_file"].file,
             encoding=request.encoding,
         )
-        #подключаем читалку и передаем файл для чтения
         reader = DictReader(csv_file)
+        user = [User.objects.get(
+            pk=int(row['user']))
+            for row in reader]
+        list_product = Product.objects.all()
+        product = [list_product.get(
+            pk=int(row['pk']))
+            for row in reader]
         order_new = [
             self.model(**row)
             for row in reader
         ]
-        # создаем заказ  self.model.objects.bulk_create(order_new)
-        #привязываем заказ к товарам через промежуточную таблицу Product_order(в model.py),
-        # в класс Order был указан путь through='Product_order'
-        product_neworder = random.choice(Product.all())
-        order_now = Product_order(
-            order=self.model.objects.bulk_create(order_new),
-            product=product_neworder)
-
+        Order.objects.bulk_create(order_new)
         self.message_user(request, "Data from CSV was imported")
         return redirect("..")
-
 
     def get_urls(self):
         urls = super().get_urls()
