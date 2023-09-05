@@ -155,20 +155,19 @@ class OrderAdmin(admin.ModelAdmin):
             encoding=request.encoding,
         )
         reader = DictReader(csv_file)
-        user = [User.objects.get(
-            pk=int(row['user']))
-            for row in reader]
-        list_product = Product.objects.all()
-        product = [list_product.get(
-            pk=int(row['pk']))
-            for row in reader]
-        order_new = [
-            self.model(**row)
-            for row in reader
-        ]
-        Order.objects.bulk_create(order_new)
+
+        for row in reader:
+            order = Order.objects.create(
+                user_id = row['user_id'],
+                delivery_address = row['delivery_address'],
+                promocode= row['promocode']
+            )
+            order.save()
+            order.products.set(row['products'])
+
         self.message_user(request, "Data from CSV was imported")
         return redirect("..")
+
 
     def get_urls(self):
         urls = super().get_urls()
