@@ -1286,3 +1286,158 @@ django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
 2023-08-31 08:28:22,267 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-08-31 08:38:59,131 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/shopapp/admin.py changed, reloading.
 2023-08-31 08:39:00,301 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-09-06 11:01:54,734 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-09-06 11:02:22,435 [WARNING] django.request Not Found: /blog/articles/latest/feed/
+2023-09-06 11:02:37,573 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:02:41,291 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:03:39,868 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:03:42,537 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:03:44,454 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:03:49,456 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:04:05,700 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:04:23,247 [ERROR] django.request Internal Server Error: /ru/admin/shopapp/order/20/change/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
+2023-09-06 11:04:26,368 [ERROR] django.request Internal Server Error: /ru/admin/jsi18n/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/middleware.py", line 175, in __call__
+    return f(*args, **kwargs)
+  File "/Users/mariaorlova/PycharmProjects/python_django/import_export/mysite/requestdataapp/middlewares.py", line 44, in __call__
+    return render(request, 'requestdataapp/error-time.html')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sentry_sdk/integrations/django/templates.py", line 102, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: requestdataapp/error-time.html
