@@ -158,12 +158,12 @@ class OrderAdmin(admin.ModelAdmin):
 
         for row in reader:
             order = Order.objects.create(
-                user_id = row['user_id'],
-                delivery_address = row['delivery_address'],
-                promocode= row['promocode']
+                user_id=row['user_id'],
+                delivery_address=row['delivery_address'],
+                promocode=row['promocode']
             )
             order.save()
-            order.products.set(row['products'])
+            order.products.set(row['products'].split(','))
 
         self.message_user(request, "Data from CSV was imported")
         return redirect("..")
