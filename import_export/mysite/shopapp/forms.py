@@ -17,3 +17,6 @@ class ProductForm(forms.ModelForm):
         widget=forms.ClearableFileInput(attrs={'allow_multiple_selected': True})
     )
 
+
+class CSVImportForm(forms.Form):
+    csv_file = forms.FileField()

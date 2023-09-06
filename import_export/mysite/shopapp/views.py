@@ -20,6 +20,7 @@ from .forms import ProductForm
 from .models import Product, Order, ProductImage
 from .serializers import OrderSerializer, ProductSerializer
 from drf_spectacular.utils import extend_schema, OpenApiResponse
+from django.contrib.syndication.views import Feed
 
 
 @extend_schema(description='Product views CRUD')
@@ -228,6 +229,26 @@ class ProductsDataExportView(View):
         return JsonResponse({'products': products_data})
 
 
+class LatestProductsFeed(Feed):
+    title = 'Shop (latest)'
+    description = 'Updates on changes and addiction products'
+    link = reverse_lazy('shopapp:products/latest/feed/')
+
+    # Для загрузки продуктов
+    def items(self):
+        return (
+            Product.objects
+            .filter(created_at__isnull=False)
+            .order_by('-created_at')[:5]
+        )
+
+    def item_title(self, item: Product):
+        return item.title
+
+    def item_description(self, item: Product):
+        return item.body[:200]
+
+
 class OrdersDataExportView(View):
     def test_funk(self):
         if self.request.user.is_staff:
@@ -247,3 +268,23 @@ class OrdersDataExportView(View):
             for order in orders
         ]
         return JsonResponse({'orders': orders_data})
+
+
+class LatestOrdersFeed(Feed):
+    title = 'Shop (latest)'
+    description = 'Updates on changes and addiction orders'
+    link = reverse_lazy('shopapp:orders/latest/feed/')
+
+    # Для загрузки заказов
+    def items(self):
+        return (
+            Order.objects
+            .filter(created_at__isnull=False)
+            .order_by('-created_at')[:5]
+        )
+
+    def item_title(self, item: Order):
+        return item.title
+
+    def item_description(self, item: Order):
+        return item.body[:200]
