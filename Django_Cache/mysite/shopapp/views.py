@@ -217,7 +217,7 @@ class UserOrdersListView(LoginRequiredMixin, ListView):
 class UserDataExportView(View):
     def get(self, request: HttpRequest, *args, **kwargs) -> JsonResponse:
         # создание кэш-ключa
-        cache_key = "orders_cache"
+        cache_key = f"orders_cache:{self.kwargs['user_id']}"
         orders_data = cache.get(cache_key)
         # проверка-есть ли что в кэш
         if orders_data is None:

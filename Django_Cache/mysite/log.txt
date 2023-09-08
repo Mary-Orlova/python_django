@@ -7203,3 +7203,8 @@ AttributeError: module 'django.core.cache' has no attribute 'get'
 2023-09-08 22:48:03,770 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-09-08 22:50:02,503 [WARNING] django.request Not Found: /blog/articles/latest/feed/
 2023-09-08 22:51:00,619 [WARNING] django.request Not Found: /ru/accounts/about-me/
+2023-09-08 23:00:43,926 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-09-08 23:00:52,889 [WARNING] django.request Not Found: /ru/accounts/logout/
+2023-09-08 23:00:53,563 [WARNING] django.request Not Found: /ru/logout/
+2023-09-08 23:06:45,615 [INFO] django.utils.autoreload /Users/mariaorlova/PycharmProjects/python_django/Django_Cache/mysite/shopapp/views.py changed, reloading.
+2023-09-08 23:06:46,866 [INFO] django.utils.autoreload Watching for file changes with StatReloader
