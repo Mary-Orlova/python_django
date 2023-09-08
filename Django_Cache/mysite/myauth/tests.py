@@ -1,3 +1,8 @@
+"""
+В этом модуле лежат различные тесты.
+"""
+
+
 from django.test import TestCase
 from django.urls import reverse
 

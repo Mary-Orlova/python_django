@@ -2,10 +2,9 @@
 
 {% block object-tools-items %}
 {% load admin_urls %}
-  <li>
-    <a href="{% url 'admin:import_products_csv' %}" class="addlink">
-      Import CSV
-    </a>
-  </li>
-  {{ block.super }}
+    <li>
+        <a href="{% url 'admin:import_products_csv' %}" class="addlink">Import CSV product</a>
+    </li>
+    {{ block.super }}
+
 {% endblock %}
