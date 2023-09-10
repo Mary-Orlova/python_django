@@ -11,7 +11,7 @@
 
   {% if user.is_authenticated %}
         {% if user.pk %}
-        {% cache 300 userinfo  %}
+        {% cache 300 userinfo user.pk %}
             <p>User has this orders: </p>
             <ul>
                 {% for order in orders_list %}
