@@ -1,15 +1,24 @@
+"""
+Пути подключения для представлений приложения mapiapp.
+"""
+
 from django.urls import path
-
 from .views import (
-    ArticlesListView,
-    ArticleDetailView,
-    LatestArticlesFeed,
-)
+    ArticleListView,
+    ArticleCreateView,
+    ArticleDetailsView,
+    ArticleUpdateView,
+    ArticleDeleteView,
+    )
 
-app_name = "blogapp"
+
+app_name = 'blogapp'
+
 
 urlpatterns = [
-    path("articles/", ArticlesListView.as_view(), name="articles"),
-    path("articles/<int:pk>/", ArticleDetailView.as_view(), name="article"),
-    path("articles/latest/feed/", LatestArticlesFeed(), name="articles-feed"),
+    path('articles/', ArticleListView.as_view(), name='article_list'),
+    path('article/create/', ArticleCreateView.as_view(), name='article_create'),
+    path('article/<int:pk>/', ArticleDetailsView.as_view(), name='article_details'),
+    path("article/<int:pk>/update/", ArticleUpdateView.as_view(), name="article_update"),
+    path('article/<int:pk>/archive/', ArticleDeleteView.as_view(), name='article_delete'),
 ]
