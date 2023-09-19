@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+from os import getenv
+import logging.config
 from pathlib import Path
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as __
@@ -18,27 +19,33 @@ import sentry_sdk
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+DATABASE_DIR = BASE_DIR / "database"
+DATABASE_DIR.mkdir(exist_ok=True)
 #
 # Подключение пакета Sentry SDK + ссылка индивидуальная, ее нельзя афишировать_через нее приходят уведомления
+import sentry_sdk
 sentry_sdk.init(
-dsn="https://0cc328ab19e60065433c2f3c39bc93ba@o4505727550357504.ingest.sentry.io/4505727579389952",
-traces_sample_rate=1.0,
+    dsn=getenv('DJANGO_dsn'),
+    traces_sample_rate=1.0,
 )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hvxn%qq=gyw^4*o2lo1#bw0=wh#ux9s8h!=@c608arf_gz3+^7'
+SECRET_KEY = getenv(
+    'DJANGO_SECRET_KEY'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv('DJANGO_DEBUG', '0') == '1'
 
 # Хосты внутренний - нули для подключения локального сервера 127
 ALLOWED_HOSTS = [
     '0.0.0.0',
     '127.0.0.1',
-]
+] + getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
+
 # конфигурация Internal IPs
 INTERNAL_IPS = [
     '127.0.0.1',
@@ -125,7 +132,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': DATABASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -169,7 +176,7 @@ USE_TZ = True
 USE_L1ON = True
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale/'
+    DATABASE_DIR / 'locale/'
 ]
 
 LANGUAGES = [
@@ -183,7 +190,7 @@ LANGUAGES = [
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'uploads'
+MEDIA_ROOT = DATABASE_DIR / 'uploads'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -193,43 +200,36 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = reverse_lazy("myauth:about-me")
 LOGIN_URL = reverse_lazy("myauth:login")
 # Размер логов для хранения в файле в базовой директории с названием log.txt (3 штуки)
-LOGFILE_NAME = BASE_DIR / 'log.txt'
+LOGFILE_NAME = DATABASE_DIR / 'log.txt'
 LOGFILE_SIZE = 1 * 1024 * 1024
 LOGFILE_COUNT = 3
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '%(asctime)s [%(levelname)s] %(name)s %(message)s',
-        },
-    },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-        'logfile': {
-            'class': 'logging.handlers.RotatingFileHandler',
-            # 'class': 'logging.handlers.TimeRotatingFileHandler',
-            # ротация по дням выше код
-            'filename': LOGFILE_NAME,
-            'maxBytes': LOGFILE_SIZE,
-            'backupCount': LOGFILE_COUNT,
-            'formatter': 'verbose',
-        },
-    },
-    'root': {
-        'handlers': [
-            'console',
-            'logfile',
-        ],
-        'level': 'INFO',
-        # 'level': 'DEBUG',
+LOGLEVEL = getenv('DJANGO_LOGLEVEL', 'info').upper()
 
-    },
-}
+logging.config.dictConfig({
+  'version': 1,
+  'disable_existing_loggers': False,
+  'formatters': {
+      'console': {
+         ' format': '%(asctime)s %(levelname)s  [%(name)s:%(lineno)s]  %(module)s %(message)s',
+      },
+  },
+
+  'handlers': {
+      'console': {
+          'class': 'logging.StreamHandler',
+          'formatter': 'console',
+      },
+  },
+  'loggers': {
+      '' : {
+          'level': LOGLEVEL,
+          'handlers': [
+           'console',
+          ],
+      },
+  },
+})
 
 
 REST_FRAMEWORK = {
